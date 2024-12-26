@@ -146,7 +146,6 @@ function App() {
         {/* Conditionally Render Table Only After Fetching Data */}
         {isDataFetched && storedData.length > 0 && (
           <div className="stored-data-container">
-            <h3>Stored Data:</h3>
             <table className="data-table">
               <thead>
                 <tr>
