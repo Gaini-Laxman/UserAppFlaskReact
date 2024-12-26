@@ -1,0 +1,290 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #004d7a;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+  position: relative;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #003b5c;
+  border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #004d7a;
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-links li:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #003b5c;
+  border-radius: 5px;
+}
+
+/* Header Styling */
+.header {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.header h1 {
+  font-size: 40px;
+  color: #004d7a;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 20px;
+  color: #555;
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.send-button {
+  padding: 12px 20px;
+  background-color: #004d7a;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #003b5c;
+}
+
+/* Response Container */
+.response-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: monospace;
+  word-wrap: break-word;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #004d7a;
+  color: white;
+  margin-top: 50px;
+}
+
+footer .footer-links a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar-links li:hover {
+    background-color: transparent;
+  }
+
+  .navbar-links li:hover .dropdown-menu {
+    position: static;
+  }
+
+  .navbar-links.show {
+    display: block;
+  }
+
+  .form-container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* Add this to App.css to style the table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.get-data-button :hover {
+background-color: blue;
+ 
+}
+
+.get-data-button {
+  padding: 10px 10px;
+  background-color: blue;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 10%;
+  transition: background-color 0.3s ease;
+}
+
+/* Primary color for Edit button */
+.edit-button {
+  background-color: #007bff; /* Blue primary color */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Danger color for Delete button */
+.delete-button {
+  background-color: #dc3545; /* Red danger color */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Darker red when hovered */
+}
+
+
+/* Style for the logo in the navbar */
+.navbar-logo {
+  width: 100px; /* Set the width of the logo */
+  height: 50px; /* Maintain aspect ratio */
+  vertical-align: middle; /* Align image vertically with text */
+  
+ 
+}
